@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify, render_template_string
 from datetime import datetime, timedelta
 import json
-
+from flask import Flask, request, jsonify, render_template_string, make_response
 app = Flask(__name__)
 
 # Simple in-memory storage for demo (use Redis in production)
@@ -97,11 +97,11 @@ LANDING_PAGE = """
             background: #2a5298; 
             color: white;
         }
-        .api-example {
-            background: #f5f5f5;
-            padding: 2rem;
-            border-radius: 10px;
-            margin: 2rem 0;
+        @app.route('/')
+def landing():
+    response = make_response(render_template_string(LANDING_PAGE))
+    response.headers['Content-Type'] = 'text/html; charset=utf-8'
+    return response
         }
         pre {
             background: #1a1a1a;
