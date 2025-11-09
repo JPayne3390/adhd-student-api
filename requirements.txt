@@ -1,2 +1,6 @@
 flask==2.3.2
 requests==2.31.0
+
+# File analyzer dependencies
+PyPDF2==3.0.1
+python-docx==1.1.0
