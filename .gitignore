@@ -1,6 +1,9 @@
 # File analyzer test outputs
 test_files/
+sample_onedrive/
 file_analysis_report.json
+demo_analysis.json
+*_analysis.json
 
 # Python
 __pycache__/
