@@ -3,12 +3,16 @@
 
 from flask import Flask, request, jsonify, render_template_string, redirect, session, url_for
 from datetime import datetime, timedelta
+from dotenv import load_dotenv
 import hashlib
 import json
 import os
 import re
 import msal
 import requests as http_requests
+
+# Load environment variables from .env file
+load_dotenv()
 
 app = Flask(__name__)
 app.secret_key = os.environ.get('FLASK_SECRET_KEY', 'dev-secret-key-change-in-production')
