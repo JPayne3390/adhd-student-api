@@ -1,0 +1,29 @@
+# File analyzer test outputs
+test_files/
+sample_onedrive/
+file_analysis_report.json
+demo_analysis.json
+*_analysis.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
